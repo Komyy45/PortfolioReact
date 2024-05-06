@@ -1,0 +1,173 @@
+/*
+=============
+-- Content -- 
+=============
+
+1- Categories
+2- Projects section
+3- card
+4- Animation
+5- Responsive design
+
+==============
+*/
+
+
+.mainContent{
+    margin: 120px 0;
+    align-items: start;
+    gap: 3.25rem;
+}
+
+/*
+================
+-- Categories -- 
+================
+*/
+
+.mainContent .buttons{
+    flex-direction: column;
+    min-width: 200px;
+    gap: 1rem;
+}
+.mainContent .buttons .option{
+    padding: 0.95rem 2.75rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+    opacity: 0.5;
+}
+.mainContent .buttons button.active,
+.mainContent .buttons .option:hover{
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    opacity: 1;
+    font-weight: bold;
+}
+.mainContent .buttons .option:hover{
+    border: 1px solid var(--border-glowing);
+}
+
+/*
+======================
+-- Projects section -- 
+======================
+*/
+
+.mainContent .projects{
+    row-gap: 1.6rem;
+    column-gap: 22px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+
+/*
+==========
+-- Card -- 
+==========
+*/
+
+.mainContent .projects .card{
+    width: 300px;
+    border: 2px solid var(--border);
+    border-radius: 0.75rem;
+    transition: var(--main-transition);
+    background-image: linear-gradient(rgba(255 ,255, 255 ,0.05) , rgba(255 ,255,255,0.05));
+}
+.mainContent .projects .card:hover{
+    border: 2px solid var(--blue);
+    box-shadow: 0 0px 5px var(--blue);
+}
+.mainContent .projects .card:hover .ref .right a{
+    animation: right-left 1s infinite alternate;
+}
+.mainContent .projects .card img{
+    width: 100%;
+    border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+}
+.mainContent .projects .card .body{
+    padding: 0.75rem 10px;
+}
+.mainContent .projects .card .name{
+    font-size: 20px;
+    color: var(--text-color);
+}
+.mainContent .projects .card .description{
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+    margin: 10px 0;
+}
+.mainContent .projects .card .ref{
+    justify-content: space-between;
+}
+.mainContent .projects .card .ref .left{
+    gap: 10px;
+}
+.mainContent .projects .card .ref .left a{
+    color: var(--secondary-text-color);
+    font-size: 20px;
+}
+.mainContent .projects .card .ref .left a:hover{
+    color: var(--blue);
+}
+.mainContent .projects .card .ref .right{
+    align-items: center;
+    gap: 10px;
+    color: var(--blue);
+}
+.mainContent .projects .card .ref .right a{
+    color: inherit;
+}
+
+/*
+================
+-- Animation -- 
+================
+*/
+
+
+@keyframes right-left {
+    0%{
+    }
+    50%{
+        transform: translateX(2.5px);
+    }
+    100%{
+        
+    }
+}
+
+/*
+=======================
+-- Responsive design -- 
+=======================
+*/
+
+@media (max-width: 662px){
+    .mainContent{
+        flex-direction: column;
+    }
+    .mainContent .buttons{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .mainContent .buttons .option{
+        padding: 0.75rem 2.25rem;
+        width: 100px;
+        font-size: 16px;
+    }
+    .mainContent .projects{
+        justify-content: center;
+    }
+}

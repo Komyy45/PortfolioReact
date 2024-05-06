@@ -1,0 +1,61 @@
+/*
+=============
+-- Content -- 
+=============
+
+1- Links
+2- Copyrights
+3- Responsive design
+
+==============
+*/
+
+
+footer{
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+
+/*
+================
+-- Links -- 
+================
+*/
+
+footer .links{
+    gap: 10px;
+    
+}
+footer .links li a{
+    color: var(--secondary-text-color);
+}
+footer .links li a:hover{
+    color: var(--blue);
+}
+
+
+/*
+================
+-- Copyrights -- 
+================
+*/
+
+footer .right{
+    color: var(--secondary-text-color);
+    font-size: 15px;
+}
+
+/*
+================
+-- Responsive design -- 
+================
+*/
+
+@media (max-width: 762px) {
+    footer{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}

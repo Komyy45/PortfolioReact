@@ -1,0 +1,157 @@
+/*
+=============
+-- Content -- 
+=============
+
+1- Title & sub-title
+2- Bar
+3- Skill Icon
+4- Card
+5- Responsive Design
+
+
+==============
+*/
+
+
+.skills{
+    margin-bottom: 12rem;
+}
+
+
+/*
+=======================
+-- Title & sub-title -- 
+=======================
+*/
+
+
+.skills .head{
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 5.35rem;
+}
+
+.skills .title{
+    font-size: 62px;
+    color: var(--text-color);
+}
+.skills .sub-title{
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    letter-spacing: -0.25px;
+}
+
+
+
+.skills .skillsSet{
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/*
+=========
+-- Bar -- 
+=========
+*/
+
+.skills .skillsSet .bar{
+    position: relative;
+    width: 2.5px;
+    height: 100%;
+    background-color: var(--blue);
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+
+/*
+================
+-- Skill Icon -- 
+================
+*/
+
+.skills .skillsSet .bar .skill{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--text-color);
+    font-size: 28px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.skills .skillsSet .bar .skill:hover{
+    background-color: var(--secondary-color);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+.skills .skillsSet .bar .skill:active{
+    scale: 0.9;
+}
+
+/*
+==========
+-- Card -- 
+==========
+*/
+
+.skills .skillsSet .bar .card{
+    background-color: transparent;
+    position: absolute;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 1rem 1.25rem ;
+    border-radius: 10px;
+    width: 350px;
+    border-bottom: 5px solid var(--blue);
+}
+.skills .skillsSet .bar .card .name{
+    font-size: 24px;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    letter-spacing: -0.2px;
+}
+.skills .skillsSet .bar .card .description{
+    padding-left: 0.95rem;
+    flex-direction: column;
+    gap: 0.65rem;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+}
+
+
+/*
+=======================
+-- Responsive Design -- 
+=======================
+*/
+
+@media (max-width: 900px) {
+    .skills .skillsSet{
+        justify-content: start;
+        padding: 0 45px;
+    }
+    .skills .skillsSet .bar .card{
+        width: 450px;
+    }
+}
+@media (max-width: 620px) {
+    .skills .skillsSet{
+        justify-content: start;
+        padding: 0 25px;
+    }
+    .skills .skillsSet .bar .card{
+        width: 240px;
+    }
+}

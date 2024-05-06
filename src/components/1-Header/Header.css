@@ -1,0 +1,204 @@
+/*
+=============
+-- Content -- 
+=============
+
+1-header
+2-buttons & icons
+3-popup design
+4- header animations
+5- header responsive design
+
+
+==============
+*/
+
+
+
+
+/*
+=============
+-- header -- 
+=============
+*/
+
+.header.flex{ 
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.header .menu{
+    display: none;
+}
+.header .toggle ,
+.header .menu{
+    font-size: 20px;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    border: 1px solid var(--border);
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    transition: var(--main-transition);
+    position: relative;
+}
+
+
+
+.header nav{
+    border-radius: 40px;
+    padding: 0 10px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    justify-self: center;
+}
+
+.header nav ul.flex{
+    justify-content: center;
+}
+.header nav ul li{
+    padding: 10px 0;
+}
+.header nav ul li a{
+    text-decoration: none;
+    color: #D7D7DB;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1;
+    opacity: 0.9;
+}
+
+/*
+=============
+-- 2-buttons & icons -- 
+=============
+*/
+.header nav ul li a:hover{
+    color: var(--blue);
+    opacity: 1;
+}
+
+.header .toggle::after ,
+.header .menu::after{
+    display: none;
+    content: "";
+    position: absolute;
+    width: 101%;
+    height: 101%;
+    border-top: 2px solid var(--blue);
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+}
+
+.header .toggle:hover:after ,
+.header .menu:hover::after{
+    display: block;
+    animation: rotating 1s infinite forwards;
+}
+
+.header button:hover{
+    color: var(--blue);
+}
+
+/*
+=============
+-- 3-popup design -- 
+=============
+*/
+
+.popUp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0  ,0 ,  0,  0.6);
+    -webkit-backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(2.5px);
+    z-index: 99999;
+}
+.popUp .modal{
+    width: 85%;
+    padding: 24px;
+    height: fit-content;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    animation: popUpAnimation 0.7s;
+}
+.popUp .modal .links{
+    flex-direction: column;
+}
+.popUp .modal .links .link{
+    padding: 0.88rem 0;
+    transition: var(--main-transition);
+}
+.popUp .modal .links .link:hover{
+    padding-left: 5px;
+}
+.popUp .modal .links .link:not(:first-child){
+    border-top: 1px solid var(--border);
+}
+.closeButton{
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+.closeButton .close{
+    background-color: transparent;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--border);
+    width: 30px;
+    height: 30px;
+    transition: var(--main-transition);
+    
+}
+.closeButton .close:hover{
+    color: crimson;
+    scale: 1.2;
+}
+
+/*
+=============
+-- 4- header animations -- 
+=============
+*/
+
+@keyframes popUpAnimation {
+    0%{
+        scale: 0.5;
+    }
+    50%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes rotating {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+}
+
+
+/*
+=============
+-- 5- header responsive design -- 
+=============
+*/
+
+@media (max-width: 700px) {
+    .header .mainNav{
+        display: none;
+    }
+    .header .menu{
+        display: block;
+    }
+}

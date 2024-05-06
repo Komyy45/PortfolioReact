@@ -1,0 +1,124 @@
+/*
+=============
+-- Content -- 
+=============
+
+1- Header
+2-Form
+3- Responsive design
+
+==============
+*/
+
+
+/*
+===============
+-- 1- Header -- 
+===============
+*/
+.contact .title{
+    font-size: 48px;
+    text-transform: capitalize;
+    color: var(--text-color);
+    letter-spacing: -0.25px;
+}
+.contact .title span{
+    margin-right: 1.1rem;
+}
+
+.contact .sub-title{
+    color: var( --secondary-text-color);
+    margin: 2rem 0;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+
+/*
+===============
+-- 2- Form -- 
+===============
+*/
+
+.contact .contactSection{
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.contact .left{
+    flex-direction: column;
+}
+.contact .right{
+    flex-grow: 1;
+}
+
+.contact .left > div{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 2.75rem;
+}
+.contact .left > div label{
+    color: var(--secondary-text-color);
+}
+
+.contact .left > div input,
+.contact .left > div textarea{
+    background-color: var(--secondary-color);
+    border: 2px solid var(--border);
+    padding: 0.75rem 1rem;
+    caret-color: var(--text-color);
+    color: var(--text-color);
+    font-size: 16px;
+    border-radius: 5px;
+    transition: var(--main-transition);
+    min-width: 300px;
+}
+.contact .left > div input:focus,
+.contact .left > div textarea:focus{
+    outline: none;
+    border: 2px solid var(--blue);
+
+}
+.contact .left > div input:focus::placeholder,
+.contact .left > div textarea:focus::placeholder{
+    opacity: 0;
+    transition: var(--main-transition);
+}
+
+
+
+.contact .left button{
+    padding: 0.45rem 1rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border);
+    width: 100px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+.contact .left button:hover{
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+.mainContent .buttons .option:hover{
+    border: 1px solid var(--border-glowing);
+}
+
+/*
+===============
+-- 3- Responsive design -- 
+===============
+*/
+
+@media (max-width: 600px) {
+    .contact .left > div{
+        gap: 1.25rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: start;
+    }
+
+}

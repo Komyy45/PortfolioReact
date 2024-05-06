@@ -1,0 +1,101 @@
+/*
+=============
+-- Content -- 
+=============
+
+1- Title
+2- Sub-title
+3- socials
+4- animation
+
+
+==============
+*/
+
+
+
+.hero{
+    min-height: calc(100vh - 200px);
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.hero .left{
+    padding: 1rem;
+    flex-grow: 1;
+    width: 450px;
+}
+
+
+/*
+=============
+-- Title -- 
+=============
+*/
+
+
+.hero .left h1{
+    font-size: 48px;
+    color: var(--text-color);
+    letter-spacing: -1px;
+    line-height: 3.3rem;
+}
+
+
+/*
+=============
+-- Sub-title -- 
+=============
+*/
+
+.hero .left p{
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.65rem;
+    letter-spacing: -0.5px;
+    margin: 1.75rem 0;
+    max-width: 80%;
+}
+
+
+/*
+=============
+-- socials -- 
+=============
+*/
+
+.hero .left .links{
+    gap: 1.5rem;
+}
+.hero .left .links .link{
+    font-size: 24px;
+    color: var(--secondary-text-color);
+}
+.hero .left .links .link a{
+    color: var(--secondary-text-color);
+    border-radius: 50%;
+}
+.hero .left .links .link a:hover{
+    animation: ping 1.2s infinite;
+}
+
+/*
+=============
+-- animations -- 
+=============
+*/
+
+
+@keyframes ping {
+    0%{
+        color: var(--secondary-text-color);
+    }
+    50%{
+        color: var(--blue);
+    }
+    100%{
+        color: var(--secondary-text-color);
+    }
+}

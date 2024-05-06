@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?dxc1l4');
+  src:  url('fonts/icomoon.eot?dxc1l4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dxc1l4') format('truetype'),
+    url('fonts/icomoon.woff?dxc1l4') format('woff'),
+    url('fonts/icomoon.svg?dxc1l4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-data:before {
+  content: "\e904";
+}
+.icon-close:before {
+  content: "\f00d";
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-times:before {
+  content: "\f00d";
+}
+.icon-twitter-square:before {
+  content: "\f081";
+}
+.icon-linkedin-square:before {
+  content: "\f08c";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-html5:before {
+  content: "\f13b";
+  color: chocolate;
+}
+.icon-css3:before {
+  content: "\f13c";
+  color: #4479a1;
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-moon-o:before {
+  content: "\f186";
+}
+.icon-chevrons-up:before {
+  content: "\e902";
+}
+.icon-menu:before {
+  content: "\e900";
+}
+.icon-sun:before {
+  content: "\e903";
+}
+.icon-bootstrap:before {
+  content: "\e90a";
+  color: #563d7c;
+}
+.icon-csharp:before {
+  content: "\e905";
+  color: #239120;
+}
+.icon-javascript:before {
+  content: "\e906";
+  color: #f7df1e;
+}
+.icon-mysql:before {
+  content: "\e907";
+  color: #4479a1;
+}
+.icon-react:before {
+  content: "\e908";
+  color: #61dafb;
+}
+.icon-sass:before {
+  content: "\e909";
+  color: #c69;
+}
+.icon-tailwindcss:before {
+  content: "\e90b";
+  color: #38b2ac;
+}
+.icon-x:before {
+  content: "\e901";
+}
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
